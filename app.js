@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	let totalClicksText = document.querySelector(".totalClicks");
 	let totalUpgradesText = document.querySelector(".totalUpgrades");
 	let available = document.querySelector(".alert");
+    let scorePerSecond = document.querySelector(".perSec")
 
 	let clickStrength = DEFAULT_CLICK_STRENGTH;
 	let autoclickerStrength = DEFAULT_AUTOCLICKER_STRENGTH;
@@ -66,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			totalScoreText.innerHTML = `<strong>Общий счёт:</strong> ${totalScore}`;
 			totalClicksText.innerHTML = `<strong>Всего кликов:</strong>: ${totalClicks}`;
 			totalUpgradesText.innerHTML = `<strong>Всего улучшений:</strong>: ${totalUpgrades}`;
+            scorePerSecond.innerHTML = `<strong>Очков в секунду:</strong> ${autoclickerStrength}`;
 
 			if (isUpgradeAvailable) available.innerHTML = "Доступен апгрейд!";
 			else available.innerHTML = "Кликай!";
